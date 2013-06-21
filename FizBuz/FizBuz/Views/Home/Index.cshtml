@@ -1,0 +1,103 @@
+﻿@model FizBuz.Models.DivEval
+
+@{
+    ViewBag.Title = "FizBuz";
+}
+
+<div id="fiz-buz-contanier" ng-app="fizbuz">
+    <header>
+        <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">Fix Buz</a>
+            </p>
+        </div>
+    </div>
+    </header>
+    <div id="body" ng-controller="FizBuzCtrl">
+        <section id="eval-settings" class="featured">
+            <div class="content-wrapper">
+
+                <div class="eval-range">
+                    <h2>Range Settings</h2>
+                    <fieldset class="editor-group">
+                        <legend>DivEval</legend>
+
+                        <div class="editor-section">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.From)
+                            </div>
+                            <div class="editor-field">
+                                <input type="number" ng-model="config.from" />
+                            </div>
+                        </div>
+                        <div class="editor-section">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.Thru)
+                            </div>
+                            <div class="editor-field">
+                                <input type="number" ng-model="config.thru" />
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <div id="eval-pairs">
+                    <h2>Define Denominators and Tokens </h2>
+
+                    <div ng-repeat="e in config.evals" class="editor-group" ">
+
+                        <div class="editor-section">
+                            <div class="editor-field">
+                                <input type="number" ng-model="e.denom" focus-it="e.shouldFocus" />
+                            </div>
+                        </div>
+                        <div class="editor-section">
+                            <div class="editor-field">
+                                <input type="text" ng-model="e.token" />
+                            </div>
+                        </div>
+                        <div class="editor-section">
+                            <button type="button" title="Remove" ng-click="removeEval($index)" >
+                                X
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <button type="button" title="Add New Pair" ng-click="addEval(null, null, true)">
+                        Add
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content-wrapper main-content clear-fix">
+            <button type="button" title="Add New Pair" ng-click="genList()">
+                Evaluate
+            </button>
+            
+            <ul class="inline">
+                <li ng-repeat="l in list" title={{$index}}>
+                    {{l}}
+                </li>
+            </ul>
+
+        </section>
+
+
+    </div>
+</div>
+
+@section styles {
+    @Styles.Render("~/Styles/FizBuz")
+}
+@section scripts {
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/angular-resource")
+    @Scripts.Render("~/bundles/app")
+}
+

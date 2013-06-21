@@ -1,0 +1,25 @@
+﻿/* fiz buz */
+
+h2
+{
+    margin-bottom: 20px;
+}
+
+.editor-section {
+    float: left;
+    margin: 0 0 0 20px;    
+    width: 250px;
+}
+
+.editor-section input
+{
+    width: 200px;
+}
+    
+.editor-group:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
