@@ -34,7 +34,6 @@ fizbuz
         FizBuzzer.get(
             { from: $scope.config.from, thru: $scope.config.thru, denoms: denoms, tokens: tokens },
             function (data, status, headers, config) {
-                var x = data;
                 $scope.list = data.Results;
             },
             function (data, status, headers, config) {

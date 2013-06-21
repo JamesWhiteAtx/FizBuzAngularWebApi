@@ -5,9 +5,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizBuz", "FizBuz\FizBuz.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizBuzLib", "FizBuzLib\FizBuzLib.csproj", "{18D57D70-7D0E-455C-BCF1-19D1EE38E11D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizBuzTest", "FizBuzTest\FizBuzTest.csproj", "{AF5A954B-B891-4493-98FB-E418D364C724}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjectWebApi", "NinjectWebApi\NinjectWebApi.csproj", "{CB1F8093-3B7E-4F27-AD1D-E2961CFEEAA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizBuzTEst", "FizBuzTEst\FizBuzTEst.csproj", "{C57A513E-3077-40D2-B9DC-8641AF85BA62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{34FA808B-A24B-454A-A50C-4959EC40D0AD}"
+	ProjectSection(SolutionItems) = preProject
+		FizBuz.vsmdi = FizBuz.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
 EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = FizBuz.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -21,10 +33,14 @@ Global
 		{18D57D70-7D0E-455C-BCF1-19D1EE38E11D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18D57D70-7D0E-455C-BCF1-19D1EE38E11D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18D57D70-7D0E-455C-BCF1-19D1EE38E11D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF5A954B-B891-4493-98FB-E418D364C724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF5A954B-B891-4493-98FB-E418D364C724}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF5A954B-B891-4493-98FB-E418D364C724}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF5A954B-B891-4493-98FB-E418D364C724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB1F8093-3B7E-4F27-AD1D-E2961CFEEAA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB1F8093-3B7E-4F27-AD1D-E2961CFEEAA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB1F8093-3B7E-4F27-AD1D-E2961CFEEAA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB1F8093-3B7E-4F27-AD1D-E2961CFEEAA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C57A513E-3077-40D2-B9DC-8641AF85BA62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C57A513E-3077-40D2-B9DC-8641AF85BA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C57A513E-3077-40D2-B9DC-8641AF85BA62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C57A513E-3077-40D2-B9DC-8641AF85BA62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
